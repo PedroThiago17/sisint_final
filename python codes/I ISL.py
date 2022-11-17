@@ -22,7 +22,7 @@ while True:
 
 	# To display A
 	for (x,y,w,h) in A:
-		cv2.rectangle(img, (x, y), (x + w, y + h), (255, 0, 0), 2)
+		cv2.rectangle(img, (x, y), (x + w, y + h), (0, 255, 0), 2)
 		font = cv2.FONT_HERSHEY_SIMPLEX
 		cv2.putText(img,'I',(x,y+h), font, 4, (0,0,255), 3, cv2.LINE_AA)
 

@@ -52,7 +52,7 @@ class StartPage(tk.Frame):
 		# background_image=tk.PhotoImage("web_parallax.jpg")
 		# background_label = tk.Label(self, image=background_image)
 		# background_label.place(x=0, y=0, relwidth=1, relheight=1)
-		load = Image.open("D:\SISINT\codigo\Entrenador-Lenguaje-Senias\Practice-module\web_parallax.jpg")
+		load = Image.open("D:\SISINT\codigo\Entrenador-Lenguaje-Senias\Practice-module\w-fondo-1.jpg")
 		render = ImageTk.PhotoImage(load)
 
 		# labels can be text or images
@@ -67,9 +67,9 @@ class StartPage(tk.Frame):
 		
 		inst_label = tk.Label(self, text="¡Inicia tu aprendizaje! \nRevisa las señas que vienen a continuación y selecciona con cual quieres practicar", font=controller.body_font)
 		inst_label.place(relx=.53, rely=.65, anchor="c")
-		button1 = tk.Button(self, text="►", bg="#F3DB40", fg="black",command=lambda: controller.show_frame("PageOne"), font=controller.h1_font)
+		button1 = tk.Button(self, text="►", bg="#FFB600", fg="black",command=lambda: controller.show_frame("PageOne"), font=controller.h1_font)
 		# button2 = tk.Button(self, text="Go to Page Two",command=lambda: controller.show_frame("PageTwo"))
-		button1.place(relx=.9, rely=.8, anchor="c")
+		button1.place(relx=.9, rely=.85, anchor="c")
 		# button2.pack(side="top", fill="x", pady=10)
 
 
@@ -80,7 +80,7 @@ class PageOne(tk.Frame):
 		tk.Frame.__init__(self, parent)
 		self.controller = controller
 		# create the canvas, size in pixels
-		load = Image.open("D:\SISINT\codigo\Entrenador-Lenguaje-Senias\Practice-module\web_parallax.jpg")
+		load = Image.open("D:\SISINT\codigo\Entrenador-Lenguaje-Senias\Practice-module\w-fondo-2.jpg")
 		render = ImageTk.PhotoImage(load)
 		# labels can be text or images
 		img = Label(self, image=render)
@@ -88,16 +88,16 @@ class PageOne(tk.Frame):
 		img.place(x=0, y=0)
 
 		title_label = tk.Label(self, text="Entrenador - Alfabeto Universal de Señas", font=controller.title_font)
-		title_label.place(relx=.53, rely=.10, anchor="c")
+		title_label.place(relx=.50, rely=.10, anchor="c")
 
-		label = tk.Label(self, text="Selecciona una letra de los botones \nSe abrirá una nueva ventana con la imagen capturada de la cámara para iniciar \nRealiza las señas mirando a la cámara \nEl programa reconocerá la seña y la enmarcará en un cuadro \n Trata de tener buena iluminación", font=controller.body_font)
-		label.place(relx=.53, rely=.69, anchor="c")
+		label = tk.Label(self, text="1. Selecciona una letra de los botones. \n2. Se abrirá una nueva ventana con la imagen capturada de la cámara para iniciar. \n3. Realiza las señas mirando a la cámara. \n4. El programa reconocerá la seña y la enmarcará en un cuadro. \n 5. Trata de tener buena iluminación", font=controller.body_font)
+		label.place(relx=.50, rely=.67, anchor="c")
 
-		back_button = tk.Button(self, text="Regresar", bg="#F3DB40", fg="black",command=lambda: controller.show_frame("StartPage"), font=controller.h1_font)
+		back_button = tk.Button(self, text="Regresar", bg="#FFB600", fg="black",command=lambda: controller.show_frame("StartPage"), font=controller.h1_font)
 		back_button.place(relx=.1, rely=.95, anchor="c")
 
 		for i in self.alphabets:		
-			a_button = tk.Button(self, text=chr(i+64), bg="#F3DB40", font=controller.h1_font, fg="black",command=lambda i=i: os.system(str("D:/SISINT/codigo/Entrenador-Lenguaje-Senias/Practice-module/") + str(chr(i+64))+".py"), width=2)
+			a_button = tk.Button(self, text=chr(i+64), bg="#FFB600", font=controller.h1_font, fg="black",command=lambda i=i: os.system(str("D:/SISINT/codigo/Entrenador-Lenguaje-Senias/Practice-module/") + str(chr(i+64))+".py"), width=2)
 			if i==1:
 				a_button.grid(row=0,column=i, padx=(17,2.3),pady=450)
 			else:
