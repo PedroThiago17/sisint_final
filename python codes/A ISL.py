@@ -8,7 +8,6 @@ A_cascade = cv2.CascadeClassifier('D:/SISINT/codigo/Entrenador-Lenguaje-Senias/H
 
 cap = cv2.VideoCapture(0)
 
-# To record the video
 # fourcc = cv2.VideoWriter_fourcc(*'XVID')
 # out = cv2.VideoWriter('A gesture detected.avi', fourcc, 10.0, (640,480))
 while True:
